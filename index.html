@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>블루 테마 웹페이지</title>
+    <!-- Flickity CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.min.css">
+    <!-- Flickity JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.pkgd.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e3f2fd;
+            color: #0d47a1;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 헤더 스타일 */
+        header {
+            background: url('img/header_img.png') no-repeat center ;
+            color: rgb(24, 24, 24);
+            padding: 40px 20px;
+            background-size: cover;
+        }
+
+        /* 네비게이션 메뉴 스타일 */
+        nav {
+            margin-top: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .example-link {
+            display: inline-block; /* 버튼처럼 보이게 하기 위해 추가 */
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            text-decoration: none; /* 밑줄 제거 */
+            border-radius: 5px; /* 둥근 모서리 */
+            }
+
+            .example-link:hover {
+            background-color: rgb(40, 178, 40); /* 마우스 호버 시 색상 변경 */
+            }
+
+            .example-link:active {
+            background-color: yellow; /* 클릭 시 색상 변경 */
+            color: black; /* 클릭 시 글자색 변경 */
+            }
+
+
+        /* 본문 스타일 */
+        main {
+            padding: 20px;
+        }
+
+        /* 푸터 스타일 */
+        footer {
+            background-color: #1976d2;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        /* 갤러리 전체 스타일 */
+        .gallery {
+            margin: 40px auto;
+            max-width: 800px;
+        }
+
+        /* Flickity 캐러셀 스타일 */
+        .carousel {
+            background: #fff;
+        }
+
+        /* 개별 이미지 스타일 */
+        .carousel-cell {
+            width: 100%;
+            height: 300px;
+            margin-right: 10px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .carousel-cell img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var elem = document.querySelector('.carousel');
+            var flkty = new Flickity(elem, {
+                cellAlign: 'center',  // 이미지 중앙 정렬
+                contain: true,       // 컨테이너 내부에 맞추기
+                wrapAround: true,    // 끝에서 다시 처음으로 순환
+                autoPlay: 3000,      // 자동 재생 (3초)
+                prevNextButtons: true, // 이전/다음 버튼 활성화
+                pageDots: true       // 페이지 점(인디케이터) 표시
+            });
+        });
+    </script>
+    
+</head>
+<body>
+
+    <header>
+        <h1>블루 테마 웹사이트</h1>
+        <nav>
+            <ul>
+                <li><a href="test2.html">ABOUT US</a></li>
+                <li><a href="#">PROJECT</a></li>
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="#">GALLERY</a></li>
+                <li><a href="#">BOARD</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <p>이곳은 본문 영역입니다.</p>
+        <a href="#" class="example-link" id="myLink">예제 링크</a>
+           
+
+        <section class="gallery">
+            <div class="carousel">
+                <div class="carousel-cell"><img src="img/photo1.jpg" alt="사진1"></div>
+                <div class="carousel-cell"><img src="img/photo2.jpg" alt="사진2"></div>
+                <div class="carousel-cell"><img src="img/photo3.jpg" alt="사진3"></div>
+                <div class="carousel-cell"><img src="img/photo4.jpg" alt="사진4"></div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>© 2025 모든 권리 보유.</p>
+    </footer>
+
+</body>
+</html>
